@@ -1,0 +1,169 @@
+@font-face {
+	font-family: Norse-Bold;
+	src: url("./fonts/Norse-Bold.otf");
+}
+:root {
+	font-family: sans-serif;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: hsl(200, 35%, 92.5%);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 4fr 6fr;
+}
+#background-container {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+#background {
+	aspect-ratio: 1920 / 1280;
+	width: calc(max(30vw, 100vh * 1920 / 1280));
+	height: calc(max(100vh, 30vw * 1280 / 1920));
+	position: relative;
+	left: calc(50% - max(30vw, 100vh * 1920 / 1280) / 2);
+	top: calc(50% - max(100vh, 30vw * 1280 / 1920) / 2);
+}
+#strip {
+	width: 100%;
+	position: relative;
+	bottom: 75%;
+	background-color: hsla(0, 0%, 0%, 40%);
+	color: white;
+	padding: 10px 0 5px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	font-family: Norse-Bold;
+	font-size: 3.5rem;
+}
+#odin-icon-container {
+	text-align: right;
+	margin: 0;
+}
+#odin-icon{
+	width: 4rem;
+}
+#content {
+	height: 100vh;
+	overflow: scroll;
+	padding: 100px 0 0 0;
+	display: grid;
+	align-items: center;
+	grid-template-rows: 1fr;
+	font-weight: bold;
+}
+.outer-content, .inner-content {
+	padding: 0 100px 0 30px;
+}
+.inner-content {
+	background-color: white;
+	padding-top: 1px;
+	box-shadow: 2px 2px 3px hsl(0, 0%, 70%);
+	margin-bottom: 30px;
+}
+#submit-btn {
+	background-color: hsl(200, 20%, 35%);
+	color: hsl(200, 15%, 92.5%);
+	box-shadow: 2px 2px 1px hsl(0, 0%, 70%);
+	border: none;
+	padding: 7.5px 30px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+#submit-btn:active {
+	background-color: hsl(200, 20%, 30%);
+}
+a {
+	text-decoration: none;
+	color: hsl(200, 20%, 35%);
+}
+#input-grid {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 50px;
+}
+#input-grid label {
+	font-size: 0.7rem;
+	color: hsl(0, 0%, 30%);
+}
+label, input {
+	display: block;
+}
+input {
+	width: 100%;
+	margin: 1px 1px 21px 1px;
+	border: 1px solid hsl(220, 13%, 91%);
+	border-radius: 3px;
+	outline: none;
+}
+#log-in {
+	margin-top: 30px;
+	font-size: 0.8em;
+}
+input:focus {
+	box-shadow: 2px 2px 2px hsl(0, 0%, 80%);
+	border: 2px solid blue;
+	margin: 0px 0px 20px 0px;
+}
+input.wrong {
+	box-shadow: 2px 2px 2px hsl(0, 0%, 80%);
+	border: 2px solid red;;
+	margin: 0px 0px 20px 0px;
+}
+#passwd-error-msg {
+	margin-top: -20px;
+	margin-bottom: 20px;
+	color: red;
+	height: 0.6em;
+	font-size: 0.6em;
+}
+.hidden {
+	visibility: hidden;
+}
+#space {
+	height: 100px;
+}
+
+@media screen and (max-width: 650px) {
+	body {
+		grid-template-columns: 1fr;
+		grid-template-rows: 50vh auto;
+		overflow: visible;
+	}
+	#content {
+		overflow: unset;
+	}
+	#background {
+		width: calc(max(100vw, 50vh * 1920 / 1280));
+		height: calc(max(50vh, 100vw * 1280 / 1920));
+		left: calc(50% - max(100vw, 50vh * 1920 / 1280) / 2);
+		top: calc(50% - max(50vh, 100vw * 1280 / 1920) / 2);
+	}
+	
+	#strip {
+		position: absolute;
+		top: 10vh;
+		width: 100%;
+		height: 1.8em;
+		font-size: 3rem;
+	}
+	#odin-icon {
+		width: 3rem;
+	}
+}
+@media screen and (max-width: 350px) {
+	#input-grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, 1fr) ;
+	}
+}

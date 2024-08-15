@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<title>Sign-up Form</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<figure id="background-container">
+			<img src="./images/background.jpg" id="background">
+			<div id="strip">
+				<figure id="odin-icon-container">
+					<img src="./images/odin-lined.png" id="odin-icon">
+				</figure>
+				<span>
+					ODIN
+				</span>
+			</div>
+		</figure>
+		<div id="content">
+			<div>
+				<div class="outer-content">
+					<p>
+						This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+					</p>
+					<p>
+						You <em>know</em> you want to.
+					</p>
+				</div>
+				<form id="form">
+					<div class="inner-content">
+						<p>Let's do this!</p>
+						<div id="input-grid">
+							<div>
+								<label for="first-name">FIRST NAME</label>
+								<input id="first-name" type="text" required>
+							</div>
+							<div>
+								<label for="last-name">LAST NAME</label>
+								<input id="last-name" type="text" required>
+							</div>
+							<div>
+								<label for="email">EMAIL</label>
+								<input id="first-name" type="email" required>
+							</div>
+							<div>
+								<label for="phone-number">PHONE NUMBER</label>
+								<input id="phone-number" type="tel" required>
+							</div>
+							<div>
+								<label for="password">PASSWORD</label>
+								<input id="password" type="password" required>
+								<div id="passwd-error-msg" class="hidden">* Passwords do not match</div>
+							</div>
+							<div>
+								<label for="confirm-password">CONFIRM PASSWORD</label>
+								<input id="confirm-password" type="password" required>
+							</div>
+						</div>
+					</div>
+					<div class="outer-content">
+						<button type="submit" id="submit-btn">Create Account</button>
+					</div>
+				</form>
+				<div class="outer-content" id="log-in">
+					Already have an acount? <a href="http://fake.com">Log in</a>
+				</div>
+				<div id="space"></div>
+			</div>
+		</div>
+		<script src="script.js">
+		</script>
+	</body>
+</html>
